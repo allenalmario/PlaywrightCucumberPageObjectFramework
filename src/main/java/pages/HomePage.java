@@ -28,4 +28,10 @@ public class HomePage extends BasePage {
 
     }
 
+    public void clickOnOnesiesLink() {
+
+        click("onesies_link");
+
+    }
+
 }

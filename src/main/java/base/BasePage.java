@@ -79,4 +79,10 @@ public class BasePage {
 
     }
 
+    public String getAttributeValue(String locatorKey) {
+
+        return page.locator(PlaywrightDriver.objectRepository.getProperty(locatorKey)).getAttribute("class");
+
+    }
+
 }

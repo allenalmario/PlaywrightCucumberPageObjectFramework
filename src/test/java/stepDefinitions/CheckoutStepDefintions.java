@@ -66,4 +66,28 @@ public class CheckoutStepDefintions {
         Assert.assertTrue(checkoutCompletePage.seeThankYouText());
 
     }
+
+    @And("user clicks on the remove button")
+    public void userClicksOnTheRemoveButton() {
+
+        cartPage.clickRemoveButton();
+
+    }
+
+    @Then("the item should be removed from the cart")
+    public void theItemShouldBeRemovedFromTheCart() {
+
+        String hello = cartPage.getRemovedCartItemAttributeValue();
+        System.out.println(hello);
+
+        Assert.assertEquals(cartPage.getRemovedCartItemAttributeValue(), "removed_cart_item");
+
+    }
+
+    @And("user clicks on the sauce labs onesie item")
+    public void userClicksOnTheSauceLabsOnesieItem() {
+
+        homePage.clickOnOnesiesLink();
+
+    }
 }

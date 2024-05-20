@@ -77,9 +77,6 @@ public class CheckoutStepDefintions {
     @Then("the item should be removed from the cart")
     public void theItemShouldBeRemovedFromTheCart() {
 
-        String hello = cartPage.getRemovedCartItemAttributeValue();
-        System.out.println(hello);
-
         Assert.assertEquals(cartPage.getRemovedCartItemAttributeValue(), "removed_cart_item");
 
     }

@@ -19,7 +19,7 @@ public class CartPage extends BasePage {
 
     public String getRemovedCartItemAttributeValue() {
 
-        return getAttributeValue("cart_contents");
+        return getAttributeValue("cart_contents", "class");
 
     }
 

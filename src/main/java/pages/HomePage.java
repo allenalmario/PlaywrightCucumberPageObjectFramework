@@ -22,4 +22,10 @@ public class HomePage extends BasePage {
 
     }
 
+    public void clickOnBackpackLink() {
+
+        click("backpack_link");
+
+    }
+
 }

@@ -73,4 +73,10 @@ public class BasePage {
         return page.url();
     }
 
+    public void clickCartButton() {
+
+        click("cart_button");
+
+    }
+
 }

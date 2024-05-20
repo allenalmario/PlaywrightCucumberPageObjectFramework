@@ -11,6 +11,7 @@ This is a Page Object Model Test Automation Framework using Playwright with Java
 - Cucumber Java
 - Cucumber TestNG
 - Extent Reports Cucumber Adapter
+- Lombok
 
 ### What is Playwright?
 

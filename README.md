@@ -4,7 +4,7 @@
 This is a Page Object Model Test Automation Framework using Playwright with Java and Cucumber BDD. It uses TestNG to run the tests and uses Extent Report to generate test result reports.
 
 ## Framework Structure
-
+Coming soon...
 
 ## Dependencies needed
 - Playwright
@@ -13,14 +13,25 @@ This is a Page Object Model Test Automation Framework using Playwright with Java
 - Extent Reports Cucumber Adapter
 - Lombok
 
-### What is Playwright?
+## How to run this project
 
-### What is Cucumber BDD?
+### GitHub Actions
+Coming soon...
 
-### Why Cucumber BDD?
+### Locally on Terminal/Command Prompt
+Run the following:
 
-### What is Page Object Model framework?
+```
+mvn clean test
+```
 
-### 
+## Where are reports saved
+
+### GitHub Page
+Coming soon...
+
+### Locally
+After tests are executed, an Extent Report with test results should be saved in the directory
+./target/cucumber-reports/extent.html
 
 *This project was built with the guidance of the Udemy course "Master Microsoft Playwright with Core Java". [CLICK HERE](https://www.udemy.com/course/playwright-java-tutorial/) to check out the course.*

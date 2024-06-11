@@ -3,9 +3,6 @@
 
 This is a Page Object Model Test Automation Framework using Playwright with Java and Cucumber BDD. It uses TestNG to run the tests and uses Extent Report to generate test result reports.
 
-## Framework Structure
-Coming soon...
-
 ## Dependencies needed
 - Playwright
 - Cucumber Java

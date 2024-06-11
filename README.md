@@ -16,7 +16,11 @@ Coming soon...
 ## How to run this project
 
 ### GitHub Actions
-Coming soon...
+- Go to Actions
+- Click on the "Playwright with Cucumber BDD Test Automation Run"
+- Select Run workflow
+- Ensure branch is set to "main"
+- Click Run workflow
 
 ### Locally on Terminal/Command Prompt
 Run the following:
@@ -28,7 +32,7 @@ mvn clean test
 ## Where are reports saved
 
 ### GitHub Page
-Coming soon...
+https://allenalmario.github.io/PlaywrightCucumberPageObjectFramework/
 
 ### Locally
 After tests are executed, an Extent Report with test results should be saved in the directory

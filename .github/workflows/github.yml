@@ -30,6 +30,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Build with Maven
+        uses: actions/checkout@v2
         # The run keyword tells the job to execute a command on the runner
         run: mvn clean test
       - name: Rename Extent report to index.html

@@ -30,8 +30,8 @@ jobs:
         # The run keyword tells the job to execute a command on the runner
         run: mvn clean test
       - name: Rename Extent report to index.html
-        run: mv target/cucmber-reports/extent.html target/site/index.html
-      - name: Archive Extent rport Index HTML
+        run: mv target/cucumber-reports/extent.html target/cucumber-reports/index.html
+      - name: Archive Extent report Index HTML
         # This line will run the action "upload-artifact" that uploads a file or directory as an
         # artifact that can be accessed later in the workflow
         uses: actions/upload-artifact@v3
@@ -41,7 +41,7 @@ jobs:
           # it will be named extent-report-index
           name: extent-report-index
           # this parameter specifies the path to the file or directory you want to archive
-          # as the artifiact. It points to the extent.htm file located in
+          # as the artifact. It points to the extent.htm file located in
           # target/cucumber-reports directory of the project
           # the artifact will be archived as extent-report-index artifact
           path: target/cucumber-reports/index.html

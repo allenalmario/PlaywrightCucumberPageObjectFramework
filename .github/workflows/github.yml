@@ -24,6 +24,8 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '21'
+          distribution: 'temurin'
+          cache: maven
   test:
     runs-on: macos-latest
     steps:

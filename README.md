@@ -1,7 +1,8 @@
 ### PLAYWRIGHT + CUCUMBER BDD PAGE OBJECT MODEL TEST AUTOMATION FRAMEWORK
 ## By Allen Almario - SDET
 
-This is a Page Object Model Test Automation Framework using Playwright with Java and Cucumber BDD. It uses TestNG to run the tests and uses Extent Report to generate test result reports.
+This is a Page Object Model Test Automation Framework using Playwright with Java and Cucumber BDD. It uses TestNG to run the tests and uses Extent Report to generate test result reports. It also utilizes GitHub actions
+for an easy "push of a button" mechanism to run the automated tests and publish the test report on GitHub.
 
 ## Dependencies needed
 - Playwright

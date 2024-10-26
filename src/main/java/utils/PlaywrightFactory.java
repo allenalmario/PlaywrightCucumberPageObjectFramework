@@ -4,15 +4,17 @@ import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
+import lombok.extern.java.Log;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
-public class PlaywrightDriver {
+@Log
+public class PlaywrightFactory {
 
-    public static PlaywrightDriver playwrightDriver;
+    public static PlaywrightFactory playwrightFactory;
     private static Playwright playwright;
     public static Browser browser;
     public static Page page;
@@ -20,7 +22,7 @@ public class PlaywrightDriver {
     public static Properties config = new Properties();
     private static FileInputStream inputStream;
 
-    private PlaywrightDriver() {
+    private PlaywrightFactory() {
 
         try {
             inputStream = new FileInputStream("./src/main/resources/properties/objectRepository.properties");
@@ -30,7 +32,6 @@ public class PlaywrightDriver {
         }
         try {
             objectRepository.load(inputStream);
-
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -68,42 +69,31 @@ public class PlaywrightDriver {
                 browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setChannel("chrome").setHeadless(headlessValue));
                 break;
         }
-
         page = browser.newPage();
-
     }
 
     public static Page getPage() {
-
         return page;
-
     }
 
     public static void setupDriver() {
-
-        playwrightDriver = new PlaywrightDriver();
-
+        playwrightFactory = new PlaywrightFactory();
     }
 
     public static void openPage(String url) {
-
+        log.info("Navigating to: " + url);
         page.navigate(url);
-
     }
 
     public static void closeBrowser() {
-
         browser.close();
         page.close();
-
     }
 
     public static void quitPlaywright() {
-
         if(page!=null) {
             playwright.close();
         }
-
     }
 
 }

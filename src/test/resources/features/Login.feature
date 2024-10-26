@@ -1,26 +1,46 @@
 Feature: Login Functionality
 
-  Scenario: Login with valid credentials
+  Scenario Outline: Login with valid credentials
     Given user navigates to login screen
-    When user enters valid username
-    And user enters valid password
+    When user enters "<username>" as username
+    And user enters "<password>" as password
     And user clicks on login button
     Then user should be on the home page
 
-  Scenario: Login with invalid credentials
+    Examples:
+      | username                | password     |
+      | standard_user           | secret_sauce |
+      | problem_user            | secret_sauce |
+      | performance_glitch_user | secret_sauce |
+      | error_user              | secret_sauce |
+      | visual_user             | secret_sauce |
+
+  Scenario Outline: Login with invalid credentials
     Given user navigates to login screen
-    When user enters a invalid username as "invalid_username"
-    And user enters a invalid password as "invalid_password"
+    When user enters "<username>" as username
+    And user enters "<password>" as password
     And user clicks on login button
-    Then user should should see an error message on the login screen
+    Then user should see an error message on the login screen
 
+    Examples:
+      | username        | password     |
+      | invalid         | invalid      |
+      | locked_out_user | secret_sauce |
 
-  Scenario: User logs out
+  Scenario Outline: User logs out
     Given user navigates to login screen
-    When user enters valid username
-    And user enters valid password
+    When user enters "<username>" as username
+    And user enters "<password>" as password
     And user clicks on login button
     And user should be on the home page
     And user clicks on hamburger menu
     And user clicks on logout link
     Then user should be on the login page
+
+    Examples:
+      | username                | password     |
+      | standard_user           | secret_sauce |
+      | problem_user            | secret_sauce |
+      | performance_glitch_user | secret_sauce |
+      | error_user              | secret_sauce |
+      | visual_user             | secret_sauce |

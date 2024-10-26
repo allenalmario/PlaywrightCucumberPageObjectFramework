@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Automation Test Results</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jun 11, 2024 06:52:18 PM</span></a>
+<a href="#"><span class="badge badge-primary">Oct 26, 2024 06:46:54 PM</span></a>
 </li>
 </ul>
 </div>
@@ -45,11 +45,6 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
-</a>
-</li>
-<li class="nav-item dropdown" onclick="toggleView('exception-view')">
-<a id="nav-exception" class="dropdown-toggle" href="#">
-<span class="ico"><i class="fa fa-bug"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
@@ -72,7 +67,6 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
-<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -85,9 +79,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Checkout Functionality</p>
+            <p class="name">Checkout</p>
             <p class="text-sm">
-              <span>6:52:20 PM</span> / <span>00:01:38:276</span>
+              <span>6:46:57 PM</span> / <span>00:01:16:507</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -95,10 +89,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Checkout Functionality</h5>
-<span class='badge badge-success'>06.11.2024 6:52:20 PM</span>
-<span class='badge badge-danger'>06.11.2024 6:53:58 PM</span>
-<span class='badge badge-default'>00:01:38:276</span>
+<h5 class="test-status text-pass">Checkout</h5>
+<span class='badge badge-success'>10.26.2024 6:46:57 PM</span>
+<span class='badge badge-danger'>10.26.2024 6:48:13 PM</span>
+<span class='badge badge-default'>00:01:16:507</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -110,78 +104,88 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>User can checkout an item</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>User checks out item</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="stepDefinitions.LoginStepDefinitions.user_navigates_to_login_screen()">
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.user_navigates_to_login_screen()">
                 <span>Given user navigates to login screen</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.LoginStepDefinitions.user_enters_valid_username()">
-                <span>When user enters valid username</span>
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.userEntersAsUsername(java.lang.String)">
+                <span>And user enters "standard_user" as username</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.LoginStepDefinitions.user_enters_valid_password()">
-                <span>And user enters valid password</span>
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.userEntersAsPassword(java.lang.String)">
+                <span>And user enters "secret_sauce" as password</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.LoginStepDefinitions.user_clicks_on_login_button()">
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.user_clicks_on_login_button()">
                 <span>And user clicks on login button</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.CheckoutStepDefintions.user_clicks_on_the_backpack_item()">
-                <span>And user clicks on the backpack item</span>
+              <div class="step pass-bg" title="stepDefinitions.ProductsPageStepDefinitions.userClicksOnItem(java.lang.String)">
+                <span>And user clicks on "Sauce Labs Backpack" item</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.CheckoutStepDefintions.userClicksOnTheAddToCartButton()">
-                <span>And user clicks on the add to cart button</span>
+              <div class="step pass-bg" title="stepDefinitions.ProductPageStepDefinitions.user_clicks_on_add_to_cart_button()">
+                <span>And user clicks on Add to Cart button</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.CheckoutStepDefintions.user_clicks_on_the_cart_button()">
-                <span>And user clicks on the cart button</span>
+              <div class="step pass-bg" title="stepDefinitions.ProductPageStepDefinitions.user_clicks_on_cart_link()">
+                <span>And user clicks on Cart link</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.CheckoutStepDefintions.user_clicks_on_the_checkout_button()">
-                <span>And user clicks on the checkout button</span>
+              <div class="step pass-bg" title="stepDefinitions.YourCartPageStepDefinitions.userEnsuresTheItemNameIs(java.lang.String)">
+                <span>And user ensures the item "Sauce Labs Backpack" is in cart and quantity is correct</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.CheckoutStepDefintions.userFillsFirstNameInCheckoutProcess()">
-                <span>And user fills first name in checkout process</span>
+              <div class="step pass-bg" title="stepDefinitions.YourCartPageStepDefinitions.userClicksOnCheckoutButton()">
+                <span>And user clicks on Checkout button</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.CheckoutStepDefintions.userFillsLastNameInCheckoutProcess()">
-                <span>And user fills last name in checkout process</span>
+              <div class="step pass-bg" title="stepDefinitions.InformationPageStepDefinitions.user_fills_out_first_name_field()">
+                <span>And user fills out First Name field</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.CheckoutStepDefintions.userFillsZipCodeInCheckoutProcess()">
-                <span>And user fills zip code in checkout process</span>
+              <div class="step pass-bg" title="stepDefinitions.InformationPageStepDefinitions.user_fills_out_last_name_field()">
+                <span>And user fills out Last Name field</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.CheckoutStepDefintions.userClicksOnCheckoutContinueButton()">
-                <span>And user clicks on checkout continue button</span>
+              <div class="step pass-bg" title="stepDefinitions.InformationPageStepDefinitions.user_fills_out_zip_code_field()">
+                <span>And user fills out Zip Code field</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.CheckoutStepDefintions.userClicksOnFinishButton()">
-                <span>And user clicks on finish button</span>
+              <div class="step pass-bg" title="stepDefinitions.InformationPageStepDefinitions.user_clicks_on_continue_button()">
+                <span>And user clicks Continue button</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.CheckoutStepDefintions.userShouldBeOnTheCheckoutCompletePage()">
-                <span>Then user should be on the checkout complete page</span>
+              <div class="step pass-bg" title="stepDefinitions.YourCartPageStepDefinitions.userEnsuresTheItemNameIs(java.lang.String)">
+                <span>And user ensures the item "Sauce Labs Backpack" is in cart and quantity is correct</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.OverviewPageStepDefinitions.user_clicks_on_finish_button()">
+                <span>And user clicks on Finish button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.CompletePageStepDefinitions.user_should_see_a_message(java.lang.String)">
+                <span>Then user should see a "Thank you for your order!" message</span>
       <div>
       </div>
               </div>
@@ -191,53 +195,530 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="19"><span class="badge log pass-bg mr-2">Pass</span>User can add an item to the cart and then remove it from the cart</div>
+        <div class="node" id="21"><span class="badge log pass-bg mr-2">Pass</span>User checks out multiple items</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="stepDefinitions.LoginStepDefinitions.user_navigates_to_login_screen()">
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.user_navigates_to_login_screen()">
                 <span>Given user navigates to login screen</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.LoginStepDefinitions.user_enters_valid_username()">
-                <span>When user enters valid username</span>
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.userEntersAsUsername(java.lang.String)">
+                <span>And user enters "standard_user" as username</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.LoginStepDefinitions.user_enters_valid_password()">
-                <span>And user enters valid password</span>
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.userEntersAsPassword(java.lang.String)">
+                <span>And user enters "secret_sauce" as password</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.LoginStepDefinitions.user_clicks_on_login_button()">
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.user_clicks_on_login_button()">
                 <span>And user clicks on login button</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.CheckoutStepDefintions.userClicksOnTheSauceLabsOnesieItem()">
-                <span>And user clicks on the sauce labs onesie item</span>
+              <div class="step pass-bg" title="stepDefinitions.ProductsPageStepDefinitions.userClicksOnItem(java.lang.String)">
+                <span>And user clicks on "Sauce Labs Backpack" item</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.CheckoutStepDefintions.userClicksOnTheAddToCartButton()">
-                <span>And user clicks on the add to cart button</span>
+              <div class="step pass-bg" title="stepDefinitions.ProductPageStepDefinitions.user_clicks_on_add_to_cart_button()">
+                <span>And user clicks on Add to Cart button</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.CheckoutStepDefintions.user_clicks_on_the_cart_button()">
-                <span>And user clicks on the cart button</span>
+              <div class="step pass-bg" title="stepDefinitions.ProductPageStepDefinitions.user_clicks_on_back_to_products_link()">
+                <span>And user clicks on Back to products button</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.CheckoutStepDefintions.userClicksOnTheRemoveButton()">
-                <span>And user clicks on the remove button</span>
+              <div class="step pass-bg" title="stepDefinitions.ProductsPageStepDefinitions.userClicksOnItem(java.lang.String)">
+                <span>And user clicks on "Sauce Labs Bolt T-Shirt" item</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.CheckoutStepDefintions.theItemShouldBeRemovedFromTheCart()">
-                <span>Then the item should be removed from the cart</span>
+              <div class="step pass-bg" title="stepDefinitions.ProductPageStepDefinitions.user_clicks_on_add_to_cart_button()">
+                <span>And user clicks on Add to Cart button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductPageStepDefinitions.user_clicks_on_cart_link()">
+                <span>And user clicks on Cart link</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.YourCartPageStepDefinitions.userEnsuresTheItemNameIs(java.lang.String)">
+                <span>And user ensures the item "Sauce Labs Backpack" is in cart and quantity is correct</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.YourCartPageStepDefinitions.userEnsuresTheItemNameIs(java.lang.String)">
+                <span>And user ensures the item "Sauce Labs Bolt T-Shirt" is in cart and quantity is correct</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.YourCartPageStepDefinitions.userClicksOnCheckoutButton()">
+                <span>And user clicks on Checkout button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.InformationPageStepDefinitions.user_fills_out_first_name_field()">
+                <span>And user fills out First Name field</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.InformationPageStepDefinitions.user_fills_out_last_name_field()">
+                <span>And user fills out Last Name field</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.InformationPageStepDefinitions.user_fills_out_zip_code_field()">
+                <span>And user fills out Zip Code field</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.InformationPageStepDefinitions.user_clicks_on_continue_button()">
+                <span>And user clicks Continue button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.YourCartPageStepDefinitions.userEnsuresTheItemNameIs(java.lang.String)">
+                <span>And user ensures the item "Sauce Labs Backpack" is in cart and quantity is correct</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.YourCartPageStepDefinitions.userEnsuresTheItemNameIs(java.lang.String)">
+                <span>And user ensures the item "Sauce Labs Bolt T-Shirt" is in cart and quantity is correct</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.OverviewPageStepDefinitions.user_clicks_on_finish_button()">
+                <span>And user clicks on Finish button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.CompletePageStepDefinitions.user_should_see_a_message(java.lang.String)">
+                <span>Then user should see a "Thank you for your order!" message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="45"><span class="badge log pass-bg mr-2">Pass</span>Validate that First Name field in Information page is required</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.user_navigates_to_login_screen()">
+                <span>Given user navigates to login screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.userEntersAsUsername(java.lang.String)">
+                <span>And user enters "standard_user" as username</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.userEntersAsPassword(java.lang.String)">
+                <span>And user enters "secret_sauce" as password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.user_clicks_on_login_button()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsPageStepDefinitions.userClicksOnItem(java.lang.String)">
+                <span>And user clicks on "Sauce Labs Backpack" item</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductPageStepDefinitions.user_clicks_on_add_to_cart_button()">
+                <span>And user clicks on Add to Cart button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductPageStepDefinitions.user_clicks_on_cart_link()">
+                <span>And user clicks on Cart link</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.YourCartPageStepDefinitions.userClicksOnCheckoutButton()">
+                <span>And user clicks on Checkout button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.InformationPageStepDefinitions.user_fills_out_last_name_field()">
+                <span>And user fills out Last Name field</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.InformationPageStepDefinitions.user_fills_out_zip_code_field()">
+                <span>And user fills out Zip Code field</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.InformationPageStepDefinitions.user_clicks_on_continue_button()">
+                <span>And user clicks Continue button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.InformationPageStepDefinitions.userShouldSeeErrorMessage(java.lang.String)">
+                <span>Then user should see "Error: First Name is required" error message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="60"><span class="badge log pass-bg mr-2">Pass</span>Validate that Last Name field in Information page is required</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.user_navigates_to_login_screen()">
+                <span>Given user navigates to login screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.userEntersAsUsername(java.lang.String)">
+                <span>And user enters "standard_user" as username</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.userEntersAsPassword(java.lang.String)">
+                <span>And user enters "secret_sauce" as password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.user_clicks_on_login_button()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsPageStepDefinitions.userClicksOnItem(java.lang.String)">
+                <span>And user clicks on "Sauce Labs Backpack" item</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductPageStepDefinitions.user_clicks_on_add_to_cart_button()">
+                <span>And user clicks on Add to Cart button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductPageStepDefinitions.user_clicks_on_cart_link()">
+                <span>And user clicks on Cart link</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.YourCartPageStepDefinitions.userClicksOnCheckoutButton()">
+                <span>And user clicks on Checkout button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.InformationPageStepDefinitions.user_fills_out_first_name_field()">
+                <span>And user fills out First Name field</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.InformationPageStepDefinitions.user_fills_out_zip_code_field()">
+                <span>And user fills out Zip Code field</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.InformationPageStepDefinitions.user_clicks_on_continue_button()">
+                <span>And user clicks Continue button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.InformationPageStepDefinitions.userShouldSeeErrorMessage(java.lang.String)">
+                <span>Then user should see "Error: Last Name is required" error message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="75"><span class="badge log pass-bg mr-2">Pass</span>Validate that Postal Code field in Information page is required</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.user_navigates_to_login_screen()">
+                <span>Given user navigates to login screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.userEntersAsUsername(java.lang.String)">
+                <span>And user enters "standard_user" as username</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.userEntersAsPassword(java.lang.String)">
+                <span>And user enters "secret_sauce" as password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.user_clicks_on_login_button()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsPageStepDefinitions.userClicksOnItem(java.lang.String)">
+                <span>And user clicks on "Sauce Labs Backpack" item</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductPageStepDefinitions.user_clicks_on_add_to_cart_button()">
+                <span>And user clicks on Add to Cart button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductPageStepDefinitions.user_clicks_on_cart_link()">
+                <span>And user clicks on Cart link</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.YourCartPageStepDefinitions.userClicksOnCheckoutButton()">
+                <span>And user clicks on Checkout button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.InformationPageStepDefinitions.user_fills_out_first_name_field()">
+                <span>And user fills out First Name field</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.InformationPageStepDefinitions.user_fills_out_last_name_field()">
+                <span>And user fills out Last Name field</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.InformationPageStepDefinitions.user_clicks_on_continue_button()">
+                <span>And user clicks Continue button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.InformationPageStepDefinitions.userShouldSeeErrorMessage(java.lang.String)">
+                <span>Then user should see "Error: Postal Code is required" error message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="90"><span class="badge log pass-bg mr-2">Pass</span>User can add an item to the cart from products page and remove it from cart</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.user_navigates_to_login_screen()">
+                <span>Given user navigates to login screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.userEntersAsUsername(java.lang.String)">
+                <span>And user enters "standard_user" as username</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.userEntersAsPassword(java.lang.String)">
+                <span>And user enters "secret_sauce" as password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.user_clicks_on_login_button()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsPageStepDefinitions.userClicksOnAddToCartButton(java.lang.String)">
+                <span>And user clicks on "Sauce Labs Onesie" Add to cart button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsPageStepDefinitions.userClicksOnRemoveButton(java.lang.String)">
+                <span>And user clicks on "Sauce Labs Onesie" Remove button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsPageStepDefinitions.theAddToCartButtonShouldBeVisible(java.lang.String)">
+                <span>Then the "Sauce Labs Onesie" Add to Cart button should be visible</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="100"><span class="badge log pass-bg mr-2">Pass</span>User can add an item to the cart from products page and go to cart and remove it from cart</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.user_navigates_to_login_screen()">
+                <span>Given user navigates to login screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.userEntersAsUsername(java.lang.String)">
+                <span>And user enters "standard_user" as username</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.userEntersAsPassword(java.lang.String)">
+                <span>And user enters "secret_sauce" as password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.user_clicks_on_login_button()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsPageStepDefinitions.userClicksOnAddToCartButton(java.lang.String)">
+                <span>And user clicks on "Sauce Labs Fleece Jacket" Add to cart button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductPageStepDefinitions.user_clicks_on_cart_link()">
+                <span>And user clicks on Cart link</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsPageStepDefinitions.userClicksOnRemoveButton(java.lang.String)">
+                <span>And user clicks on "Sauce Labs Fleece Jacket" Remove button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.YourCartPageStepDefinitions.theShouldNotBeInTheCart(java.lang.String)">
+                <span>Then the "Sauce Labs Fleece Jacket" should not be in the cart</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="111"><span class="badge log pass-bg mr-2">Pass</span>User can add an item to the cart from product page and remove it from cart</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.user_navigates_to_login_screen()">
+                <span>Given user navigates to login screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.userEntersAsUsername(java.lang.String)">
+                <span>And user enters "standard_user" as username</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.userEntersAsPassword(java.lang.String)">
+                <span>And user enters "secret_sauce" as password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.user_clicks_on_login_button()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsPageStepDefinitions.userClicksOnItem(java.lang.String)">
+                <span>And user clicks on "Sauce Labs Bike Light" item</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductPageStepDefinitions.user_clicks_on_add_to_cart_button()">
+                <span>And user clicks on Add to Cart button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsPageStepDefinitions.userClicksOnRemoveButton(java.lang.String)">
+                <span>And user clicks on "Sauce Labs Bike Light" Remove button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsPageStepDefinitions.theAddToCartButtonShouldBeVisible(java.lang.String)">
+                <span>Then the "Sauce Labs Bike Light" Add to Cart button should be visible</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="122"><span class="badge log pass-bg mr-2">Pass</span>User can add an item from product page and go to cart and remove it from cart</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.user_navigates_to_login_screen()">
+                <span>Given user navigates to login screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.userEntersAsUsername(java.lang.String)">
+                <span>And user enters "standard_user" as username</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.userEntersAsPassword(java.lang.String)">
+                <span>And user enters "secret_sauce" as password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginPageStepDefinitions.user_clicks_on_login_button()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsPageStepDefinitions.userClicksOnItem(java.lang.String)">
+                <span>And user clicks on "Test.allTheThings() T-Shirt (Red)" item</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductPageStepDefinitions.user_clicks_on_add_to_cart_button()">
+                <span>And user clicks on Add to Cart button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductPageStepDefinitions.user_clicks_on_cart_link()">
+                <span>And user clicks on Cart link</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsPageStepDefinitions.userClicksOnRemoveButton(java.lang.String)">
+                <span>And user clicks on "Test.allTheThings() T-Shirt (Red)" Remove button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.YourCartPageStepDefinitions.theShouldNotBeInTheCart(java.lang.String)">
+                <span>Then the "Test.allTheThings() T-Shirt (Red)" should not be in the cart</span>
       <div>
       </div>
               </div>
@@ -247,26 +728,26 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="31"
+        <li class="test-item"  status="pass" test-id="134"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Login Functionality</p>
             <p class="text-sm">
-              <span>6:54:00 PM</span> / <span>00:00:54:022</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>6:48:14 PM</span> / <span>00:00:32:994</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Login Functionality</h5>
-<span class='badge badge-success'>06.11.2024 6:54:00 PM</span>
-<span class='badge badge-danger'>06.11.2024 6:54:54 PM</span>
-<span class='badge badge-default'>00:00:54:022</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=31</span>
+<h5 class="test-status text-pass">Login Functionality</h5>
+<span class='badge badge-success'>10.26.2024 6:48:14 PM</span>
+<span class='badge badge-danger'>10.26.2024 6:48:47 PM</span>
+<span class='badge badge-default'>00:00:32:994</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=134</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
@@ -277,367 +758,511 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="32"><span class="badge log pass-bg mr-2">Pass</span>Login with valid credentials</div>
+        <div class="node" id="135"><span class="badge log pass-bg mr-2">Pass</span>Login with valid credentials</div>
       </div>
     </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="stepDefinitions.LoginStepDefinitions.user_navigates_to_login_screen()">
-                <span>Given user navigates to login screen</span>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="136"><span class="badge log pass-bg mr-2">Pass</span>Login with valid credentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user navigates to login screen</span>
       <div>
       </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.LoginStepDefinitions.user_enters_valid_username()">
-                <span>When user enters valid username</span>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters "standard_user" as username</span>
       <div>
       </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.LoginStepDefinitions.user_enters_valid_password()">
-                <span>And user enters valid password</span>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user enters "secret_sauce" as password</span>
       <div>
       </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.LoginStepDefinitions.user_clicks_on_login_button()">
-                <span>And user clicks on login button</span>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on login button</span>
       <div>
       </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.LoginStepDefinitions.user_should_be_on_the_home_page()">
-                <span>Then user should be on the home page</span>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user should be on the home page</span>
       <div>
       </div>
+                  </div>
               </div>
-          </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="144"><span class="badge log pass-bg mr-2">Pass</span>Login with valid credentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user navigates to login screen</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters "problem_user" as username</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user enters "secret_sauce" as password</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user should be on the home page</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="152"><span class="badge log pass-bg mr-2">Pass</span>Login with valid credentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user navigates to login screen</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters "performance_glitch_user" as username</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user enters "secret_sauce" as password</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user should be on the home page</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="160"><span class="badge log pass-bg mr-2">Pass</span>Login with valid credentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user navigates to login screen</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters "error_user" as username</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user enters "secret_sauce" as password</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user should be on the home page</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="168"><span class="badge log pass-bg mr-2">Pass</span>Login with valid credentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user navigates to login screen</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters "visual_user" as username</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user enters "secret_sauce" as password</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user should be on the home page</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
         </div>
   </div>
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="40"><span class="badge log pass-bg mr-2">Pass</span>Login with invalid credentials</div>
+        <div class="node" id="176"><span class="badge log pass-bg mr-2">Pass</span>Login with invalid credentials</div>
       </div>
     </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="stepDefinitions.LoginStepDefinitions.user_navigates_to_login_screen()">
-                <span>Given user navigates to login screen</span>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="177"><span class="badge log pass-bg mr-2">Pass</span>Login with invalid credentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user navigates to login screen</span>
       <div>
       </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.LoginStepDefinitions.userEntersAInvalidUsernameAs(java.lang.String)">
-                <span>When user enters a invalid username as "invalid_username"</span>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters "invalid" as username</span>
       <div>
       </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.LoginStepDefinitions.userEntersAInvalidPasswordAs(java.lang.String)">
-                <span>And user enters a invalid password as "invalid_password"</span>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user enters "invalid" as password</span>
       <div>
       </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.LoginStepDefinitions.user_clicks_on_login_button()">
-                <span>And user clicks on login button</span>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on login button</span>
       <div>
       </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.LoginStepDefinitions.userShouldShouldSeeAnErrorMessageOnTheLoginScreen()">
-                <span>Then user should should see an error message on the login screen</span>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user should see an error message on the login screen</span>
       <div>
       </div>
+                  </div>
               </div>
-          </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="185"><span class="badge log pass-bg mr-2">Pass</span>Login with invalid credentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user navigates to login screen</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters "locked_out_user" as username</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user enters "secret_sauce" as password</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user should see an error message on the login screen</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
         </div>
   </div>
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="48"><span class="badge log fail-bg mr-2">Fail</span>User logs out</div>
-          <div class="status-avatar float-right mr-4">
-            <i class="fa fa-paperclip"></i>
-          </div>
+        <div class="node" id="193"><span class="badge log pass-bg mr-2">Pass</span>User logs out</div>
       </div>
     </div>
-        <div class="">
-          <div class="card-body">
-              <div class="step pass-bg" title="stepDefinitions.LoginStepDefinitions.user_navigates_to_login_screen()">
-                <span>Given user navigates to login screen</span>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="194"><span class="badge log pass-bg mr-2">Pass</span>User logs out</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user navigates to login screen</span>
       <div>
       </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.LoginStepDefinitions.user_enters_valid_username()">
-                <span>When user enters valid username</span>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters "standard_user" as username</span>
       <div>
       </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.LoginStepDefinitions.user_enters_valid_password()">
-                <span>And user enters valid password</span>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user enters "secret_sauce" as password</span>
       <div>
       </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.LoginStepDefinitions.user_clicks_on_login_button()">
-                <span>And user clicks on login button</span>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on login button</span>
       <div>
       </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.LoginStepDefinitions.user_should_be_on_the_home_page()">
-                <span>And user should be on the home page</span>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user should be on the home page</span>
       <div>
       </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.LoginStepDefinitions.userClicksOnHamburgerMenu()">
-                <span>And user clicks on hamburger menu</span>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on hamburger menu</span>
       <div>
       </div>
-              </div>
-              <div class="step fail-bg" title="stepDefinitions.LoginStepDefinitions.userClicksOnLogoutLink()">
-                <span>And user clicks on logout link</span>
-      <div>
-        <textarea disabled class="code-block">java.lang.AssertionError: Error {
-  message='Timeout 30000ms exceeded.
-  name='TimeoutError
-  stack='TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (/private/var/folders/lr/439_fwvd3m76p9vy50d57kcc0000gn/T/playwright-java-8276882854766092908/package/lib/server/progress.js:78:26)
-    at Frame.click (/private/var/folders/lr/439_fwvd3m76p9vy50d57kcc0000gn/T/playwright-java-8276882854766092908/package/lib/server/frames.js:1007:23)
-    at FrameDispatcher.click (/private/var/folders/lr/439_fwvd3m76p9vy50d57kcc0000gn/T/playwright-java-8276882854766092908/package/lib/server/dispatchers/frameDispatcher.js:158:30)
-    at FrameDispatcher._handleCommand (/private/var/folders/lr/439_fwvd3m76p9vy50d57kcc0000gn/T/playwright-java-8276882854766092908/package/lib/server/dispatchers/dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (/private/var/folders/lr/439_fwvd3m76p9vy50d57kcc0000gn/T/playwright-java-8276882854766092908/package/lib/server/dispatchers/dispatcher.js:361:39)
-}
-Call log:
-- waiting for locator("//*[@id=\"logout_sidebar_link\"]")
--   locator resolved to <a href="#" tabindex="0" id="logout_sidebar_link" c…>Logout</a>
-- attempting click action
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #1
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #2
--   waiting 20ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #3
--   waiting 100ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #4
--   waiting 100ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #5
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #6
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #7
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #8
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #9
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #10
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #11
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #12
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #13
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #14
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #15
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #16
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #17
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #18
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #19
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #20
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #21
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #22
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #23
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #24
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #25
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #26
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #27
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #28
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #29
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #30
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #31
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #32
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #33
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #34
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #35
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #36
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #37
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #38
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #39
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #40
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #41
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #42
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #43
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #44
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #45
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #46
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #47
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #48
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #49
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #50
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #51
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is not visible
-- retrying click action, attempt #52
--   waiting 500ms
-
-	at org.testng.Assert.fail(Assert.java:111)
-	at base.BasePage.click(BasePage.java:24)
-	at pages.HomePage.clickOnLogoutLink(HomePage.java:21)
-	at stepDefinitions.LoginStepDefinitions.userClicksOnLogoutLink(LoginStepDefinitions.java:62)
-	at ✽.user clicks on logout link(file:///Users/runner/work/PlaywrightCucumberPageObjectFramework/PlaywrightCucumberPageObjectFramework/src/test/resources/features/Login.feature:25)
-</textarea>
-      
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepDefinitions.LoginStepDefinitions.userShouldBeOnTheLoginPage()">
-                <span>Then user should be on the login page</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step pass-bg" title="AFTER">
-                <span>stepDefinitions.Hooks.tearDown(io.cucumber.java.Scenario)</span>
-      <div>screenshot
-          <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='../cucumber-reports/embedded1.png' src="../cucumber-reports/embedded1.png">
-    
-    </div></div>
-</div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on logout link</span>
       <div>
       </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user should be on the login page</span>
+      <div>
+      </div>
+                  </div>
               </div>
-          </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="205"><span class="badge log pass-bg mr-2">Pass</span>User logs out</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user navigates to login screen</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters "problem_user" as username</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user enters "secret_sauce" as password</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user should be on the home page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on hamburger menu</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on logout link</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user should be on the login page</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="216"><span class="badge log pass-bg mr-2">Pass</span>User logs out</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user navigates to login screen</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters "performance_glitch_user" as username</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user enters "secret_sauce" as password</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user should be on the home page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on hamburger menu</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on logout link</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user should be on the login page</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="227"><span class="badge log pass-bg mr-2">Pass</span>User logs out</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user navigates to login screen</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters "error_user" as username</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user enters "secret_sauce" as password</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user should be on the home page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on hamburger menu</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on logout link</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user should be on the login page</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="238"><span class="badge log pass-bg mr-2">Pass</span>User logs out</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user navigates to login screen</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters "visual_user" as username</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user enters "secret_sauce" as password</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user should be on the home page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on hamburger menu</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on logout link</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user should be on the login page</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
         </div>
   </div>
 </div>
@@ -652,82 +1277,30 @@ Call log:
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="test-wrapper row view exception-view attributes-view">
-<div class="test-list">
-<div class="test-list-tools">
-<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
-</div>
-<div class="test-list-wrapper scrollable">
-<ul class="test-list-item">
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>1</span>
-</span>
-<p class="name">java.lang.AssertionError</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>java.lang.AssertionError</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>18:54:23 PM</td>
-<td>
-<a href="#" class="linked" test-id='31' id='56'>And user clicks on logout link</a>
-<div class="">
-<span class="badge badge-default">Login Functionality.User logs out.And user clicks on logout link</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="test-content scrollable">
-<div class="test-content-detail">
-<div class="detail-body"></div>
-</div>
-</div>
-</div><div class="container-fluid p-4 view dashboard-view">
+<div class="container-fluid p-4 view dashboard-view">
 <div class="row">
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jun 11, 2024 06:52:18 PM</h3>
+<h3>Oct 26, 2024 06:46:54 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jun 11, 2024 06:54:54 PM</h3>
+<h3>Oct 26, 2024 06:48:47 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Features Passed</p>
-<h3>1</h3>
+<h3>2</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Features Failed</p>
-<h3>1</h3>
+<h3>0</h3>
 </div></div>
 </div>
 </div>
@@ -743,12 +1316,12 @@ Call log:
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='50%'>
-<b>1</b> features passed
+<div><small data-tooltip='100%'>
+<b>2</b> features passed
 </small>
 </div>
 <div>
-<small data-tooltip='50%'><b>1</b> features failed,
+<small data-tooltip='0%'><b>0</b> features failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -766,9 +1339,9 @@ Call log:
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='80%'><b>4</b> scenarios passed</small></div>
+<div><small data-tooltip='100%'><b>21</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='20%'><b>1</b> scenarios failed,
+<small data-tooltip='0%'><b>0</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -786,10 +1359,10 @@ Call log:
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='95%'><b>40</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>180</b> steps passed</small></div>
 <div>
-<small data-tooltip='2%'><b>1</b> steps failed,
-<b>1</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='0%'><b>0</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -805,7 +1378,7 @@ Call log:
 </div></div>
 <script>
 var timeline = {
-"Checkout Functionality":98.276,"Login Functionality":54.022
+"Checkout":76.507,"Login Functionality":32.994
 };
 </script>
 <div class="row">
@@ -814,21 +1387,21 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 1,
-failParent: 1,
+passParent: 2,
+failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 4,
-failChild: 1,
+passChild: 21,
+failChild: 0,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 40,
-failGrandChild: 1,
+passGrandChild: 180,
+failGrandChild: 0,
 warningGrandChild: 0,
-skipGrandChild: 1,
+skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
 };
